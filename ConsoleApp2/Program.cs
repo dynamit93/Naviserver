@@ -51,7 +51,43 @@ namespace ServerSocketApp
                     string[] words = text.Split(delimiterChars);
                     System.Console.WriteLine($"{words.Length} words in text:");
                    
-                    string PlayerData = "Player Data is PlayerData";
+                    
+
+                    string messageToSend = Convert.ToString(
+
+                      Player.Playerid
+                    + "Playerid:"
+                    + Player.TargetId
+                    + "TargetId:"
+                    + Player.Health
+                    + "Health:"
+                    + Player.Mana
+                    + "Mana:"
+                    + Player.Capacity
+                    + "Capacity:"
+                    + Player.Stamina
+                    + "Stamina:"
+                    + Player.MagicLevel
+                    + "MagicLevel:"
+                    + Player.Fist
+                    + "Fist:"
+                    + Player.Club
+                    + "Club:"
+                    + Player.Sword
+                    + "Sword:"
+                    + Player.Axe
+                    + "Axe:"
+                    + Player.Distance
+                    + "Distance:"
+                    + Player.Shielding
+                    + "Shielding:"
+                    + Player.X
+                    + "X:"
+                    + Player.Y
+                    + "Y:"
+                    + Player.Z
+                    + "Z:");
+
                     foreach ( var word in words)
                     {
 
@@ -160,22 +196,8 @@ namespace ServerSocketApp
                                 Player.Z = Reciveint;
 
                             }
-                        }
-
-
-
-
-
-
-                        
-
+                        }                                         
                         //System.Console.WriteLine($"{word}");
-
-
-
-
-
-
                     }
                     /* need to add                     
                      * sw.WriteLine(PlayerData);
@@ -183,7 +205,7 @@ namespace ServerSocketApp
                      * to a new Thread
                      */
                     
-                    sw.WriteLine(PlayerData);
+                    sw.WriteLine(messageToSend);
                     sw.Flush();
                 }
                 catch (Exception e)
